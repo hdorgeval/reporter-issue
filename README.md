@@ -2,6 +2,8 @@
 
 ## This repo reproduces an issue with testcafe-reporter-cucumber-json
 
+This issue is not specific to this specific reporter, but to any TestCafé reporter.
+
 ## After cloning the repo
 
 - run the command `npm install`.
