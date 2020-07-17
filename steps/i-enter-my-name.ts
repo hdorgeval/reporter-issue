@@ -24,5 +24,6 @@ export default async (): Promise<void> => {
     .notOk()
     .click(selector.userNameInputBox)
     .typeText(selector.userNameInputBox, value, { replace: true })
-    .pressKey('tab');
+    .pressKey('tab')
+    .takeElementScreenshot(selector.userNameInputBox);
 };

@@ -16,5 +16,6 @@ export default async (): Promise<void> => {
     .hover(selector.submitButton)
     .expect(selector.submitButton.hasAttribute('disabled'))
     .notOk({ timeout: config.timeout.longTimeout })
+    .takeElementScreenshot(selector.submitButton)
     .click(selector.submitButton);
 };

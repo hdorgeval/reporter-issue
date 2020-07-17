@@ -27,5 +27,6 @@ export default async (stepName: string): Promise<void> => {
     .expect(selector.resultContent.innerText)
     .contains(message)
     .expect(selector.resultContent.innerText)
-    .contains(myName);
+    .contains(myName)
+    .takeScreenshot();
 };

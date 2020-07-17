@@ -1,8 +1,7 @@
 import 'testcafe';
 import { getCurrentConfig } from '../config/testcafe-config';
 import { pageModel } from '../models';
-import { env } from '../step-filters/env';
-import { and, given, then, when } from '../step-runner';
+import { given, then, when } from '../step-runner';
 declare const fixture: FixtureFn;
 /**
  * @feature
@@ -18,18 +17,7 @@ fixture('Feature: TestCafe Example')
     await given('I navigate to the testcafe sample page');
   });
 
-test('Scenario: cannot submit my feedback when I did not enter my name', async () => {
-  await then('no name should be populated');
-  await and('I cannot submit my feedback on testcafe');
-});
-
-test('Scenario: can send feedback with my name only', async () => {
-  await when('I enter my name');
-  await then('I can submit my feedback on testcafe');
-});
-
 test('Scenario: send feedback', async () => {
-  await env.only('devci');
   await given('I enter my name');
   await when('I send my feedback on testcafe');
   await then("a 'Thank you' message should appear with my name");
