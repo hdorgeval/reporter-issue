@@ -29,7 +29,7 @@ npm test
 npm run report
 ```
 
-This will generate a nice and searchable HTML report like this ([more details here](https://github.com/hdorgeval/testcafe-reporter-cucumber-json)):
+This will generate a nice and searchable HTML report ([more details here](https://github.com/hdorgeval/testcafe-reporter-cucumber-json)):
 
 ## The problem
 
